@@ -2,12 +2,11 @@ from datetime import datetime
 
 def get_difference_between_dates(date1, date2):
     try:
-        # Convert date strings to datetime objects
         date1_obj = datetime.strptime(date1, "%Y.%m.%d")
+        #Формат строки "%Y.%m.%d" указывает, как должна быть представлена дата в строке.
         date2_obj = datetime.strptime(date2, "%Y.%m.%d")
-
-        # Calculate the difference between dates in days
         date_difference = (date2_obj - date1_obj).days
+        #Рассчитывает разницу между двумя датами в виде объекта
         return abs(date_difference)
 
     except Exception as e:

@@ -1,7 +1,9 @@
 def sort_by_price(shopping_list):
     try:
         sorted_list = sorted(shopping_list, key=lambda x: x['price'])
+        #список сортируется по возрастанию цен.
         return sorted_list
+    #Отсортированный список возвращается из функции.
 
     except Exception as e:
         print(f"An error occurred: {e}")

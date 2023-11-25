@@ -4,6 +4,9 @@ def get_perfect_squares(input_list):
             return num > 0 and int(num**0.5)**2 == num
 
         perfect_squares = [num for num in input_list if is_perfect_square(num)]
+        #генератор списка для создания нового списка perfect_squares,
+        # содержащего только те элементы из input_list,
+        # для которых функция is_perfect_square возвращает True.
         return perfect_squares
 
     except Exception as e:
